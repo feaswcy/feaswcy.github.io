@@ -1,2 +1,2 @@
-# charstars.github.com
-my tech-blog in github
+# notes.feaswcy.com
+my tech-blog at [note.feaswcy.com](http://note.feaswcy.com)
