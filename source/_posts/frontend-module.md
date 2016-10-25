@@ -15,7 +15,7 @@ tags:
 &lt;script type="text/javascript" charset="utf-8" src="b.js"&gt; &lt;/script&gt;</pre>
 其中b.js依赖于a.js，这样载入脚本的方式必须注意到先后的顺序，当项目很小时，这样的人肉管理似乎还能说得过去，但是如果进入到团队的开发协作或者稍微大一点的项目，库的数量增加时，这样的方法会让编写代码者成为名副其实的码农（搬代码的农民），于是聪明的前端工程师开发了一系列的处理工具来处理加载问题，随着时间的推移，工具也越来越多，新旧工具和规范的更迭速度真是让不少外行人惊呼“贵圈真乱！”
 
-2.命名空间
+2. 命名空间
 
 我想最开始学习JS的同学可能了解到这个名词，命名空间是为了解决在一个js脚本编写的过程中，不同的js文件中用到了相同的文件名造成函数的覆盖，于是参照java的方式，创建一个对象，并且把所有的其他功能都放在这个对象的方法之下，通常是这样：
 <pre>var app={};
@@ -51,7 +51,7 @@ app.bfunc=function(){
 
 命名冲突和文件依赖，是前端开发过程中的两个经典问题。下来我们继续看看前端对这两个问题的处理。
 
-3.AMD/CMD与commonJS
+3. AMD/CMD与commonJS
 
 AMD/CMD是加载脚本文件的两种不同方式，以下代码会给你一个直观的认识（代码的原作者为：[知乎-玉伯](https://www.zhihu.com/people/lifesinger)，侵删）：
 <pre>// CMD
@@ -76,10 +76,10 @@ b.doSomething()
 *   AMD：Asynchronous Module Definition，异步模块定义，主要用于浏览器环境下的加载文件（它也想在node环境被使用），根据AMD的官方文档，使用AMD规范的require.js的具体实现方法是找到html的&lt;/head&gt;标签，并且在此标签前添加上你按照require.js的写法引入的库文件，只要你的文件是按照amd规范的，require.js会自动帮你处理好加载的顺序（当然如果不是amd规范，你可以使用config里的shim方法）。
 *   CMD：Common Module Definition，commonJS基本上是在和AMD做一样的事情，只是他们对规范的定义略有不同，由于commonJS国产并且中文文档比较丰富，你可以自行去官网查看他们的定义和使用方法。
 *   CommonJS  Module：在大多数时候我们只是将它成为，commonJS，与上面两种规范不同的是，commonJs规范并没有一个像sea.js 和require.js那样的库，他是一种在服务器环境下的文件规范，我们知道node.js使javascript在服务器环境下大放异彩，node.js提供一些底层的方法来使频繁的异步I/O操作变得简洁而高效，但是开发者在开发上层工具的过程中，难免会遇到调用其他库的问题，由于javascript语言本身的缺陷，调用需要通过其他方式实现（就像上文的require.js等工具，实际上在其他语言中，如C或GO，使用include和import就可以解决），CommonJS规范解决了这一问题，并且使用commonJS规范的框架逐渐在桌面应用等其他终端上开始使用开来（个人非常期待在嵌入式里能有所应用....）
-4.ES6的新标准
+4. ES6的新标准
 
 头疼的Javascript发展史还没有结束，但是现在看来ECMAscript 6即将把这些多种多样的规范进行最后的整合：ES6 的module标准，这个标准整合了脚本模块化的各个方案，是未来javascript开发的风向标，他提供了export和import等模块加载的命令，如果你想深入的了解可以去花段时间学习一下ECMAscript6，推荐可以看一下阮一峰的网络日志关于ES6的介绍，网站地址：[ES6-阮一峰](http://Common Module Definition)，未来的发展趋势一定是向ES6靠拢的，现阶段ES6是否在企业中应用还不太了解，但你可以在这个项目中看到不同浏览器版本对于ES6的支持情况：[ES6 compat-table](https://kangax.github.io/compat-table/es6/)。
 
-5.一些个人看法
+5. 一些个人看法
 
 在我个人开来，ES6以后一定会逐渐普及的，希望成为前端或者WEB工程师的同学很有必要去学习一下，但是现在如果在公司里做开发的话，应该还是看技术带头人的安排吧，看完本文希望你对JS模块化的发展有一定的认识，并且在找工作时面试时能够派上用途。
