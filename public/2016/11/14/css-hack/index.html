@@ -1,6 +1,15 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="我的目标是星辰和大海！"><title>css-hack | Feaswcy</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/public/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/public/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">css-hack</h1><a id="logo" href="/public/.">Feaswcy</a><p class="description">Follow excellence and success will chase you.</p></div><div id="nav-menu"><a href="/public/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/public/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/public/about/"><i class="fa fa-user"> 关于</i></a><a href="/public/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">css-hack</h1><div class="post-meta">Nov 14, 2016<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>以下是在写CSS过程中总结到的小技巧或者兼容性hack写法，for notes:)</p>
 <h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><ul>
 <li>padding会增大元素的高度，一般最好不要给父级元素设置高度，而应该对子元素进行调整使父元素高度撑起来，除非你想给子元素border而担心给在了父元素上。</li>
+<li>垂直居中：</li>
+</ul>
+<ol>
+<li><code><div>要居中的文字</div></code>给外层的div height和line-height属性相等.</li>
+<li>vertical-align middle</li>
+<li>当知道了具体尺寸等信息时，用盒模型和定位也可以实现</li>
+</ol>
+<ul>
+<li>border-radius 50%设置圆角</li>
 </ul>
 <h2 id="CSS样式"><a href="#CSS样式" class="headerlink" title="CSS样式"></a>CSS样式</h2><ul>
 <li>背景透明，使子元素的文字/图片不透明，chrome使用rgba，兼容性写法是添加一个brother，给它透明，使用position定位和父级一样大，并且让其他brother浮动。</li>
