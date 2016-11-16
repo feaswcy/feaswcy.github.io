@@ -1,5 +1,5 @@
 ---
-title: 前端工程师学习之路
+title: The way to FE engineer
 date: 2016-11-10 19:40:00
 tags: web技术工程师
 categories:
