@@ -11,7 +11,7 @@
 <li>element.className，element.id，element.lastChild，</li>
 </ul>
 </li>
-<li><p>dom attr dom元素的属性集合，如返回第一个属性的值：document.getElementsByTagName(“button”)[0].attributes[0].value.查明第一个属性是不是id:document.getElementById(“demo”).attributes[0].isId;;</p>
+<li><p>dom attr dom元素的属性集合，如返回第一个属性的值：document.getElementsByTagName(“button”)[0].attributes[0].value.查明第一个属性是不是id:document.getElementById(“demo”).attributes[0].isId;</p>
 </li>
 <li><p>dom event,DOM的事件处理模型.</p>
 <ol>
@@ -45,8 +45,8 @@
 </ul>
 </li>
 <li>js数组和字符串的常用操作函数(除此之外还有Math,Date,RegExp等对象及常用方法)：<ul>
-<li>str常用:charAt(),concat(),indexOf(),replace(),match(),slice(),splice(),split()，substr();</li>
-<li>array常用:join(),push(),pop(),slice(),sort(),splice(),toString(),reverse();</li>
+<li>str常用:charAt(),concat(),indexOf(),replace(),<br>match(),slice(),splice(),split()，substr();</li>
+<li>array常用:join(),push(),pop(),slice(),sort(),<br>splice(),toString(),reverse();</li>
 </ul>
 </li>
 <li>js实现克隆。普通数据直接复制，只会发生值传递，object和array会发生引用传递，因此需要先判断类型，之后对这两种类型进行判断，然后使用for(x in obj){ ..}这样访问对象的每个属性(或是数组的第index元素)。</li>
@@ -66,13 +66,19 @@
 </li>
 </ul>
 <ul>
-<li>一个js题目，消除一个数组里面的重复元素。<ul>
+<li><p>一个js题目，消除一个数组里面的重复元素。</p>
+<ul>
 <li>先排序，之后遍历比较 a[i]与a[i+1],有相邻的相等，splice()</li>
 <li>在ECMA5中(IE8以下)数组支持indexOf()方法，可以把结果数组使用indexOf()方法检测array[i]是否能找到，找不到就push进去，找到返回i递增。</li>
 </ul>
 </li>
+<li><p>js面向对象。js中的函数本身实现了类，同时函数自己也是这个类的示例，按照面向对象的几个要点，归纳js中的实现方法：</p>
+<ul>
+<li>对象的产生</li>
+<li>类的继承</li>
+<li>extend的深拷贝<h2 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h2></li>
 </ul>
-<h2 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h2><ul>
+</li>
 <li><p>node.js使用的是chrome v8引擎，ECMAscript是一个标准，它定义了一些基础的api，但是本身并没有去实现，v8和ie都实现了这个标准，但是扩展的内容不是完全相同的，因此在完成差不多的功能时实现函数有所差别。</p>
 </li>
 <li><p>node.js的核心对象有三个，processer, event emitter,buffer,</p>
