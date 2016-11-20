@@ -2,14 +2,17 @@
 title: About
 date: 2016-10-23 12:29:57
 ---
+ru guo ni kan bu dong ying yu,jiu bu yao zhao wo le.
+### if you are a developer ,or come here by accident 0.0
+you can share your opinion or contact me through [zhi-hu community](https://www.zhihu.com/people/happyfizz) by sending me a private letter ,and follow me / give me a star on github will be henhao.
 
-### if you are a developer
-
-I am glad if you collected my site in your blogs or share on the social network! :)
+I will be glad if you collected my site in your blogs or share on the social network!, give me your blog link,
+we can add friendly link to each other :)
 
 ### if you are employer
 
-I am new searching for a job about frontend engineer,you can visit my online [resume](../resume),I am excited to create an awesome project!
+**Anytime  for a  front-end engineer job**,you can visit my online [resume](../resume) to see if i can fit your team 
+well,contact me <a href="mailto:708853816@qq.com" title="click to send me an email" >708853816@qq.com</a>
 
 ### if you are my friends
 
