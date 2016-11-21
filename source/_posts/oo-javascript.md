@@ -23,7 +23,8 @@ tags: 前端
 		}
 		```
 	*js对象的属性同样可以设置私有和共有，实现通过object对象上的defineProperty方法，如图:* 
-	{% asset_img 使用defineProperty实现内部属性.png www目录 %}
+
+	{% asset_img 使用defineProperty实现内部属性.png  <p style="text-align:center">图1：属性的私有</p>%}
 
 3. 使用方法1和2创建对象很简单，但是创建许多相同对象时非常繁琐。于是有：
 	+ **工厂模式**:函数像工厂流水线一样生产object。
@@ -88,7 +89,7 @@ tags: 前端
 	        alert(person1.sayName == person2.sayName);  //true
 		```
 	    **理解原型：就像一条链子的源头**
-	    {% asset_img 理解js原型.png www目录 %}
+	    {% asset_img 理解js原型.png <p style="text-align:center">图二:理解js原型</p> %}
 	    + 在js中，任何一个函数被创建的时候，js编译器(或者引擎)就会根据特定规则给这个函数创建了prototype属性(函数为什么有属性？因为一切都是对象啊！)，这个prototype属性值是一个函数指针，指向prototype属性在函数的指针，在这个例子中，prototype有一个constructor,它的值就是Person.
 		+ 访问一个对象的属性时，会先找这个实例的属性，再去找原型链上的。判断一个属性是原型链上的还是实例自己的，可以使用hasOwnProperty()函数
 
@@ -102,6 +103,58 @@ tags: 前端
 	+ 假冒，在子类的构造函数中调用父类函数，通过this指针的转移来假冒子类有父类的属性，缺点：没有原型继承
 	+ 混合方式，属性通过this指针转移实现，方法通过原型继承。
 
++ 为方便记忆与理解，把js的类与继承特性理解为以下几句话：
+	+ js中创建一个函数时，同时创建了这个函数的类和这个类的实例。函数也是对象，可以拥有属性(prototype.name)和方法(apply,call).
+	+ 实现对象的继承，分为四类(假设类为A,B;对象为c,d(c,d来源于object对象))
+	 ```javascript
+		function A(){};function B(){};
+		var c={};var d={};
+	 ```
+		+ 类之间继承(注意以下每种方法使用完都要检查prototype.constructor的值是否指向正确)。
+			1. 在A函数体添加 **B.apply(this, arguments);** //不继承原型链
+			2. **A.prototype=new B();**     //实例化了一个不用的B类对象，浪费内存
+			3. **A.prototype=B.prototype;** //注意给B加原型方法会改变A
+			4. **function C(){};C.prototype=B.prototype;A.prototype=new C();**用空对象做中介
+		+ 对象之间继承。
+			1. 基本数据类型:浅拷贝
+			2. 引用类型：深拷贝
+		+ 对象继承类
+			1. 创建一个类的实例，转换为对象之间的继承;
+		+ 类继承对象
+			1. A.prototype=c;
+
 
 
 ## 深拷贝与浅拷贝
+深拷贝和浅拷贝用于实现可访问属性的对象(不new构造函数，你无法访问一个构造函数new出来的对象的属性)之间的继承。
+比如：a={}，b={}，如何让对象b获得a的属性和方法
+### 浅拷贝
+ ```javascript
+	function extendCopy(p) {
+	　　　　var c = {};
+	　　　　for (var i in p) { 
+	　　　　　　c[i] = p[i];
+	　　　　}
+	　　　　c.uber = p;
+	　　　　return c;
+	　　}
+ ```
+ 上面的函数将p的每一个属性都复制到最后返回的对象c中，在没有属性重名的情况下，可实现属性的拷贝。
+ 这种方式的拷贝称为浅拷贝，当p的一个属性是 **数组**或者 **对象**的时候，c[i]所拷贝的是一个指针地址(引用)，对原来p上的修改会同步到c上，这是不允许的，所以上面这个函数只能实现基本数据类型的拷贝
+### 深拷贝
+ ```javascript
+	function deepCopy(p, c) {
+	　　　　var c = c || {};
+	　　　　for (var i in p) {
+	　　　　　　if (typeof p[i] === 'object') {
+	　　　　　　　　c[i] = (p[i].constructor === Array) ? [] : {};
+	　　　　　　　　deepCopy(p[i], c[i]);
+	　　　　　　} else {
+	　　　　　　　　　c[i] = p[i];
+	　　　　　　}
+	　　　　}
+	　　　　return c;
+	　　}
+ ```
+ 对比一下，深拷贝只是在拷贝发生前对p的类型进行了判断处理，然后递归的调用了自己，因为数组中的元素也是对象或者数组，最终都是要递归到基本数据类型上，所以这种方式能够实现深拷贝，jquery的extend方法就是这样实现的。
+ 
