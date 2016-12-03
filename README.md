@@ -1,12 +1,12 @@
 # notes.feaswcy.com
-ÎÒµÄ¼¼Êõ²©¿Í£º[notes.feaswcy.com](http://notes.feaswcy.com)
+ï¿½ÒµÄ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½[notes.feaswcy.com](http://notes.feaswcy.com)
 
 ## DNS setting
-**CNAME½âÎö**: notes.feaswcy.com ->feaswcy.github.io
+**CNAMEï¿½ï¿½ï¿½ï¿½**: notes.feaswcy.com ->feaswcy.github.io
 
-µ±ÊäÈëURL£º notes.feaswcy.com ,½«»á½âÎöÇëÇóµ½ feaswcy.github.io
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½URLï¿½ï¿½ notes.feaswcy.com ,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ feaswcy.github.io
 
-## Ìí¼Ógithub²©¿ÍÈë¿Ú
-½«publicÄ¿Â¼×÷ÎªÉú²ú»·¾³£¬Ã¿´Îhexo generateÉú³ÉĞÂÒ³Ãæ£¬½«index.html¸´ÖÆµ½²Ö¿â¸ùÄ¿Â¼×÷Îª²©¿ÍÈë¿Ú.
+## ï¿½ï¿½ï¿½githubï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½publicÄ¿Â¼ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½hexo generateï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½æ£¬ï¿½ï¿½index.htmlï¿½ï¿½ï¿½Æµï¿½ï¿½Ö¿ï¿½ï¿½Ä¿Â¼ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 
 
