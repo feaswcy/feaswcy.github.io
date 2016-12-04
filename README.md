@@ -1,12 +1,12 @@
 # notes.feaswcy.com
-�ҵļ������ͣ�[notes.feaswcy.com](http://notes.feaswcy.com)
+我的技术博客notes.feaswcy.com](http://notes.feaswcy.com)
 
 ## DNS setting
-**CNAME����**: notes.feaswcy.com ->feaswcy.github.io
+**CNAME解析**: notes.feaswcy.com ->feaswcy.github.io
 
-������URL�� notes.feaswcy.com ,����������� feaswcy.github.io
+将URLnotes.feaswcy.com解析到feaswcy.github.io
 
-## ���github�������
-��publicĿ¼��Ϊ����������ÿ��hexo generate������ҳ�棬��index.html���Ƶ��ֿ��Ŀ¼��Ϊ�������.
+## 添加github博客入口
+将public下的index.html复制到仓库根目录作为博客入口，每次hexo generate将自动执行
 
 
