@@ -11,7 +11,7 @@ we can add friendly link to each other :)
 
 ### if you are employer
 
-**Anytime  for a  front-end engineer job**,you can visit my online [resume](../resume) to see if i can fit your team 
+**Anytime  for a  front-end engineer job**,you can visit my online [resume](/public/static/resume/) to see if i can fit your team
 well,contact me <a href="mailto:708853816@qq.com" title="click to send me an email" >708853816@qq.com</a>
 
 ### if you are my friends
