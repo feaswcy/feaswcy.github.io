@@ -1,7 +1,6 @@
 ---
 title: 使用webpack与browserify
-tags:
-  - webpack，browserify
+tags: fe
 id: 57
 categories:
   - web技术

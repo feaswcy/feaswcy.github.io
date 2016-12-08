@@ -1,7 +1,6 @@
 ---
 title: 我的工程师梦想
 tags:
-  - 工程师，文化，理想
 id: 15
 categories:
   - 随笔

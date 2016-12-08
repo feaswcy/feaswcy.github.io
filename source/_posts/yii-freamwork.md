@@ -1,8 +1,6 @@
 ---
 title: PHP YII框架搭建
-tags:
-  - warmserver
-  - yii
+tags: php yii
 id: 48
 categories:
   - web技术

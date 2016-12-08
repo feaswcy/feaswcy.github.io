@@ -1,7 +1,7 @@
 ---
 title: oo-javascript
 date: 2016-11-20 13:19:53
-tags: 前端
+tags: fe-js
 ---
 一切皆对象。
 ## 创建对象

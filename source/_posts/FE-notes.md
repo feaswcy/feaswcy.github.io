@@ -1,7 +1,7 @@
 ---
 title: 前端布局与样式技巧汇总
 date: 2016-11-14 17:00:00
-tags: 前端
+tags: fe
 ---
 以下是在写CSS过程中总结到的小技巧或者兼容性hack写法，for notes:)
 ## HTML标准

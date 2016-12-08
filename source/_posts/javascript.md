@@ -1,7 +1,7 @@
 ---
 title: Javascript
 date: 2016-11-16 21:30:47
-tags: 前端
+tags: fe-js
 ---
 js虽然用了很长时间，但是一直没有系统的学习这门脚本语言的，导致太过于依赖jquery，所以这边文章用来记录javascript笔记，以ES6为标准，记录浏览器下的js和node.js下的js以及相关技术或者易错点。
 ## browser下的javascript相关（DOM/BOM的方法运用）
