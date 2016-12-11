@@ -1,5 +1,5 @@
 # notes.feaswcy.com
-我的技术博客notes.feaswcy.com](http://notes.feaswcy.com)
+我的技术博客[notes.feaswcy.com](http://notes.feaswcy.com)
 
 ## DNS setting
 **CNAME解析**: notes.feaswcy.com ->feaswcy.github.io
