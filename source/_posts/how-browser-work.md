@@ -1,4 +1,10 @@
-# 浏览器的渲染机制
+---
+title: 浏览器的一点知识
+date: 2017-01-30 16:47:45
+tags: notes
+---
+
+## 浏览器的渲染机制
 
 参考文章：http://www.jianshu.com/p/c9049adff5ec
 

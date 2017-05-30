@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="我的目标是星辰和大海！"><title>webaccess-web-service | Feaswcy</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/public/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/public/favicon.ico"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/public/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">webaccess-web-service</h1><a id="logo" href="/public/.">Feaswcy</a><p class="description">Follow excellence and success will chase you.</p></div><div id="nav-menu"><a href="/public/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/public/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/public/about/"><i class="fa fa-user"> 关于</i></a><a href="/public/game/"><i class="fa fa-gamepad"> game</i></a><a href="/public/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">webaccess-web-service</h1><div class="post-meta">May 1, 2017<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><h1 id="login"><a href="#login" class="headerlink" title="login"></a>login</h1><h2 id="logon-Need-Login-Project-node-before-use-Webservice-Get-project-list-after-logon-success"><a href="#logon-Need-Login-Project-node-before-use-Webservice-Get-project-list-after-logon-success" class="headerlink" title="logon:Need Login Project node before use Webservice. Get project list after logon success."></a>logon:Need Login Project node before use Webservice. Get project list after logon success.</h2><p>HTTP Method: GET<br>JSON Url: <a href="http://localhost/WaWebService/Json/Login" target="_blank" rel="external">http://localhost/WaWebService/Json/Login</a><br>response:{<br>“Result”:{<br>“Ret”:0,<br>“Total”:2<br>},<br>“Projects”:[{<br>“ID”:1,<br>“Name”:” Express”,<br>“Description”:”Project Description”<br>},<br>{<br>“ID”:2,<br>“Name”:”WaScada”,<br>“Description”:”Project Description”<br>}]<br>}</p>
+<h2 id="server-time-Get-the-Server-Time-Return-the-date-time-and-time-difference-with-Server"><a href="#server-time-Get-the-Server-Time-Return-the-date-time-and-time-difference-with-Server" class="headerlink" title="server time:Get the Server Time. Return the date, time, and time difference with Server"></a>server time:Get the Server Time. Return the date, time, and time difference with Server</h2><p>HTTP method: GET<br>JSON URL: <a href="http://localhost/WaWebService/Json/ServerTime" target="_blank" rel="external">http://localhost/WaWebService/Json/ServerTime</a><br>{</p>
+<p>“Date”:”2014\/01\/01”,</p>
+<p>“Time”:”10:00:00”,</p>
+<p>“Offset”:” 08:00:00”</p>
+<p>}</p>
+<h2 id="getuserinfo-Get-detail-information-of-current-login-user-in-Project"><a href="#getuserinfo-Get-detail-information-of-current-login-user-in-Project" class="headerlink" title="getuserinfo:Get detail information of current login user in Project."></a>getuserinfo:Get detail information of current login user in Project.</h2><p>HTTP method: GET<br>JSON URL: <a href="http://localhost/WaWebService/JSON/GetUserInfo/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/JSON/GetUserInfo/{ProjectName}</a><br>{<br>“Result”:{<br>“Ret”:0<br>},<br>“UserInfo”:{<br>“ProjIdbw”:0,<br>“UserId”:48,<br>“UserName”:”admin”,<br>“Description”:”Administrator”,<br>“Area”:[127,127,127,127,. . . . .,127,127,127,127],<br>“UserGraphics”:[{<br>“UserId”:48,<br>“GraphicNode”:5,<br>“GraphicName”:”Page1.bgr”<br>}],<br>“UserNodes”:[{<br>“UserId”:48,<br>“NodeIdbw”:5<br>}]<br>}<br>}</p>
+<h2 id="getverison"><a href="#getverison" class="headerlink" title="getverison"></a>getverison</h2><p>Get the highest WebAccess version of SCADA node in the Project.</p>
+<p>HTTP Method: GET</p>
+<p>XML Url: <a href="http://localhost/WaWebService/GetVersion/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/GetVersion/{ProjectName}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/JSON/GetVersion/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/JSON/GetVersion/{ProjectName}</a><br>{<br>“Result”:{<br>“Ret”:0<br>},<br>“Version”:”8.0”<br>}</p>
+<h2 id="get-client-limit"><a href="#get-client-limit" class="headerlink" title="get client limit"></a>get client limit</h2><p>Get number of Client limitation</p>
+<p>HTTP Method: GET</p>
+<p>XML Url: <a href="http://localhost/WaWebService/GetClientLimit/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/GetClientLimit/{ProjectName}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/JSON/" target="_blank" rel="external">http://localhost/WaWebService/JSON/</a> GetClientLimit /{ProjectName}<br>{<br>“LimitCount”:1024<br>}</p>
+<p>#project information</p>
+<h2 id="project-list"><a href="#project-list" class="headerlink" title="project list"></a>project list</h2><p>List all Proect in Project node.</p>
+<p>HTTP method: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/ProjectList" target="_blank" rel="external">http://localhost/WaWebService/ProjectList</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/JSON/ProjectList" target="_blank" rel="external">http://localhost/WaWebService/JSON/ProjectList</a><br>{<br>“Result”:{<br>“Ret”:0,<br>“Total”:2<br>},<br>“Projects”:[{<br>“ID”:3,<br>“Name”:”Express”,<br>“Description”:”Express Project”<br>},<br>{<br>“ID”:2,<br>“Name”:”WaScada”,<br>“Description”:”WaScada Project”<br>}]<br>}</p>
+<h2 id="project-detail"><a href="#project-detail" class="headerlink" title="project detail"></a>project detail</h2><p>List Project detail information.</p>
+<p>HTTP method: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/ProjectDetail/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/ProjectDetail/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/JSON/ProjectDetail/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/JSON/ProjectDetail/{ProjectName}</a><br>{<br>“Result”:{<br>“Ret”:0<br>},<br>“Project”:{<br>“ID”:3,<br>“Name”:”Express”,<br>“Description”:”Express Project”,<br>“IP”:”172.18.3.101”,<br>“Port”:0,<br>“TimeOut”:0,<br>“AccessSecurityCode”:””,<br>“HTTPPort”:0<br>}<br>}</p>
+<p>#node information<br>List all SCADA Node in the Project.</p>
+<p>HTTP method: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/NodeList/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/NodeList/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/JSON/NodeList/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/JSON/NodeList/{ProjectName}</a><br>{<br>“Result”:{<br>“Ret”:0,<br>“Total”:1<br>},<br>“Nodes”:[{<br>“NodeName”:”SCADA”,<br>“Description”:”Node Description”<br>}]<br>}</p>
+<h2 id="node-detail"><a href="#node-detail" class="headerlink" title="node detail"></a>node detail</h2><p>List SCADA Node detail information.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/NodeDetail/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/NodeDetail/{ProjectName}/{NodeName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/NodeDetail/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/NodeDetail/{ProjectName}/{NodeName}</a><br>{<br>“Result”:{<br>“Ret”:0<br>},<br>“Node”:{<br>“ProjectId”:3,<br>“NodeId”:4,<br>“NodeName”:”SCADA”,<br>“Description”:”Node Description”,<br>“Address”:”172.18.3.101”,<br>“Port1”:0,<br>“Port2”:0,<br>“Timeout”:0<br>}<br>}</p>
+<p>#port information</p>
+<h2 id="port-list"><a href="#port-list" class="headerlink" title="port list"></a>port list</h2><p>List all Port under Project/SCADA Node</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/PortList/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/PortList/{ProjectName}/{NodeName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/PortList/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/PortList/{ProjectName}/{NodeName}</a><br>{<br>“Result”:{<br>“Ret”:0,<br>“Total”:2<br>},<br>“Ports”:[{<br>“InterfaceName”:”TCP”,<br>“PortNumber”:2,<br>“Description”:”TCP PORT”<br>},<br>{<br>“InterfaceName”:”TCP”,<br>“PortNumber”:1,<br>“Description”:” Port Description”<br>}]<br>}</p>
+<h2 id="port-detail"><a href="#port-detail" class="headerlink" title="port detail"></a>port detail</h2><p>List Port detail information under Project/SCADA Node.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/PortDetail/{ProjectName}/{NodeName}/{Comport}" target="_blank" rel="external">http://localhost/WaWebService/PortDetail/{ProjectName}/{NodeName}/{Comport}</a></p>
+<p>Json URL: <a href="http://localhost/WaWebService/Json/PortDetail/{ProjectName}/{NodeName}/{Comport}" target="_blank" rel="external">http://localhost/WaWebService/Json/PortDetail/{ProjectName}/{NodeName}/{Comport}</a><br>{<br>“Result”:{<br>“Ret”:0<br>},<br>“Port”:{<br>“InterfaceName”:”TCPIP”,<br>“ComportNbr”:2,<br>“Description”:”TCP PORT”,<br>“BaudRate”:9600,<br>“DataBit”:8,<br>“StopBit”:1,<br>“Parity”:0,<br>“ScanTime”:1000,<br>“TimeOut”:1000,<br>“RetryCount”:3,<br>“AutoRecoverTime”:20,<br>“OPCServer”:””,<br>“OPCServerType”:”0”<br>}<br>}</p>
+<p>#device info</p>
+<h2 id="device-list"><a href="#device-list" class="headerlink" title="device list"></a>device list</h2><p>Get Device list under Comport</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/DeviceList/{ProjectName}/{NodeName}/{Comport}" target="_blank" rel="external">http://localhost/WaWebService/DeviceList/{ProjectName}/{NodeName}/{Comport}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/DeviceList/{ProjectName}/{NodeName}/{Comport}" target="_blank" rel="external">http://localhost/WaWebService/DeviceList/{ProjectName}/{NodeName}/{Comport}</a><br>{<br>“Result”:{<br>“Ret”:0,<br>“Total”:3<br>},<br>“Devices”:[{<br>“DeviceName”:”ADAM6017_5”,<br>“PortNumber”:2,<br>“Description”:”ADAM-6017 8ch AI for WebAccess”,<br>“UnitNumber”:5},<br>{<br>“DeviceName”:”ADAM6018_6”,<br>“PortNumber”:2,<br>“Description”:” ADAM-6018 AI “,<br>“UnitNumber”:6},<br>{<br>“DeviceName”:”ADAM6050_10”,<br>“PortNumber”:2,<br>“Description”:”ADAM 6050 Module”,<br>“UnitNumber”:10<br>}]<br>}</p>
+<h2 id="device-detail"><a href="#device-detail" class="headerlink" title="device detail"></a>device detail</h2><p>Get Device detail information.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/DeviceDetail/{ProjectName}/{NodeName}/{Comport}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/DeviceDetail/{ProjectName}/{NodeName}/{Comport}/{DeviceName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/JSON/DeviceDetail/{ProjectName}/{NodeName}/{Comport}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/JSON/DeviceDetail/{ProjectName}/{NodeName}/{Comport}/{DeviceName}</a><br>{<br>“Result”:{<br>“Ret”:0<br>},<br>“Device”:{<br>“DeviceName”:”ADAM6017_5”,<br>“PortNumber”:2,<br>“Description”:”ADAM-6017 8ch AI for Webaccess”,<br>“UnitNumber”:5,<br>“DeviceType”:”ADAM6K”,<br>“Primary”:{<br>“IPAddress”:”172.18.3.237”,<br>“PortNumber”:”502”,<br>“DeviceAddress”:”1”<br>},<br>“Secondary”:{<br>“IPAddress”:””,<br>“PortNumber”:””,<br>“DeviceAddress”:””<br>}<br>}<br>}</p>
+<p>#tag info</p>
+<h2 id="tag-list"><a href="#tag-list" class="headerlink" title="tag list"></a>tag list</h2><p>Get all Tag list of Project Node</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/TagList/{ProjName}" target="_blank" rel="external">http://localhost/WaWebService/TagList/{ProjName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagList/{ProjName}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagList/{ProjName}</a><br>{<br>“Result”:{<br>“Ret”:0,<br>“Total”:2<br>},<br>“Tags”:[{<br>“Name”:”Tag1”<br>“Description”:”Description1”},<br>{<br>“Name”:”Tag2”,<br>“Description”:”Description2”<br>}]<br>}</p>
+<h2 id="all-tag-list-of-a-scada-node-in-a-project"><a href="#all-tag-list-of-a-scada-node-in-a-project" class="headerlink" title="all tag list of a scada node in a project"></a>all tag list of a scada node in a project</h2><p>Get all Tag list of SCADA node in the Project</p>
+<p>HTTP METHOD: GET</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}</a></p>
+<p>JSON Response: (The same as Get Tag Value in Project Node)</p>
+<p>HTTP METHOD: POST (Use Filter)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}</a></p>
+<p>JSON Request: (The same as Get Tag Value in Project Node)</p>
+<p>JSON Response: (The same as Get Tag Value in Project Node)</p>
+<h2 id="All-Tag-list-of-the-Comport"><a href="#All-Tag-list-of-the-Comport" class="headerlink" title="All Tag list of the Comport"></a>All Tag list of the Comport</h2><p>Get all Tag (Tag) list of Comport of SCADA node in the Project</p>
+<p>HTTP METHOD: GET</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}</a></p>
+<p>JSON Response: (The same as Get Tag Value in Project Node)</p>
+<p>HTTP METHOD: POST (Use Filter)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}</a></p>
+<p>JSON Request: (The same as Get Tag Value in Project Node)</p>
+<p>JSON Response: (The same as Get Tag Value in Project Node)</p>
+<h2 id="All-Tag-list-of-the-Device"><a href="#All-Tag-list-of-the-Device" class="headerlink" title="All Tag list of the Device"></a>All Tag list of the Device</h2><p>Get all Tag (Tag) list of the Device of Comport of SCADA node in the Project</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>XML Response: (The same as Get Tag Value in Project Node)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>JSON Response: (The same as Get Tag Value in Project Node)</p>
+<p>HTTP METHOD: POST ( Use Filter)</p>
+<p>XML URL: <a href="http://localhost/WaWebService/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>XML Request: (The same as Get Tag Value in Project Node)</p>
+<p>XML Response: (The same as Get Tag Value in Project Node)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>JSON Request: (The same as Get Tag Value in Project Node)</p>
+<p>JSON Response: (The same as Get Tag Value in Project Node)</p>
+<h2 id="Tag-Detail-Information-under-Project-node"><a href="#Tag-Detail-Information-under-Project-node" class="headerlink" title="Tag Detail Information under Project node"></a>Tag Detail Information under Project node</h2><p>Get specific Tag (Point) detail information of Project node</p>
+<p>HTTP METHOD: POST</p>
+<p>XML URL: <a href="http://localhost/WaWebService/TagDetail/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/TagDetail/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/TagDetail/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/TagDetail/{ProjectName}</a><br>{<br>“Points”:[{<br>“Name”:”String”,<br>“Attributes”:[{<br>“Name”:”String”<br>}]<br>}]<br>}</p>
+<h2 id="Tag-detail-information-of-SCADA-Node"><a href="#Tag-detail-information-of-SCADA-Node" class="headerlink" title="Tag detail information of SCADA Node"></a>Tag detail information of SCADA Node</h2><p>Get Tag detail information of SCADA Nodein Project</p>
+<p>HTTP METHOD: Post</p>
+<p>XML URL: <a href="http://localhost/WaWebService/TagDetail/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/TagDetail/{ProjName}/{NodeName}</a></p>
+<p>XML Request: (The same as Get Text Tag Value in Project Node)</p>
+<p>XML Response: (The same as Get Text Tag Value in Project Node)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/JSON/TagDetail/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/JSON/TagDetail/{ProjName}/{NodeName}</a></p>
+<p>JSON Request: (The same as Get Text Tag Value in Project Node)</p>
+<p>JSON Response: (The same as Get Text Tag Value in Project Node)</p>
+<h2 id="All-Block-list-in-Project-Node"><a href="#All-Block-list-in-Project-Node" class="headerlink" title="All Block list in Project Node"></a>All Block list in Project Node</h2><p>Get all Block list in Project Node</p>
+<p>Support filter function when using POST method (only support TagName as filter).</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockList/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/BlockList/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockList/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/{ProjectName}</a></p>
+<h2 id="All-Block-list-in-SCADA-Node"><a href="#All-Block-list-in-SCADA-Node" class="headerlink" title="All Block list in SCADA Node"></a>All Block list in SCADA Node</h2><p>Get all Block list in SCADA Node</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}</a></p>
+<p>XML Response: (The same as GetComportStatus)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}</a></p>
+<p>JSON Response: (The same as GetComportStatus)</p>
+<p>HTTP METHOD: POST (Use Filter)</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}</a></p>
+<p>XML Request: (The same as GetComportStatus)</p>
+<p>XML Response: (The same as GetComportStatus)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}</a></p>
+<p>JSON Request: (The same as GetComportStatus)</p>
+<p>JSON Response: (The same as GetComportStatus)</p>
+<h2 id="All-Block-list-in-Comport"><a href="#All-Block-list-in-Comport" class="headerlink" title="All Block list in Comport"></a>All Block list in Comport</h2><p>Get all Block list in Comport/SCADA node</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}" target="_blank" rel="external">http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}</a></p>
+<p>XML Response: (The same as GetComportStatus)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}</a></p>
+<p>JSON Response: (The same as GetComportStatus)</p>
+<p>HTTP METHOD: POST (Use Filter)</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}" target="_blank" rel="external">http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}</a></p>
+<p>XML Request: (The same as GetComportStatus)</p>
+<p>XML Response: (The same as GetComportStatus)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}</a></p>
+<p>JSON Request: (The same as GetComportStatus)</p>
+<p>JSON Response: (The same as GetComportStatus)</p>
+<h2 id="All-Block-list-of-Device"><a href="#All-Block-list-of-Device" class="headerlink" title="All Block list of Device"></a>All Block list of Device</h2><p>Get all Block list in Comport /SCADA node/Project node</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>XML Response: (The same as GetComportStatus)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>JSON Response: (The same as GetComportStatus)</p>
+<p>HTTP METHOD: POST (USE Filter)</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>XML Request: (The same as GetComportStatus)</p>
+<p>XML Response: (The same as GetComportStatus)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/{ProjName}/{NodeName}/{ComportNbr}/{DeviceName}</a></p>
+<p>JSON Request: (The same as GetComportStatus)</p>
+<p>JSON Response: (The same as GetComportStatus)</p>
+<h2 id="Block-detail-information-in-Project-Node"><a href="#Block-detail-information-in-Project-Node" class="headerlink" title="Block detail information in Project Node"></a>Block detail information in Project Node</h2><p>Get all Block detail information in SCADA/Project Node.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockDetail/{ProjectName}/{BLOCKNAME}" target="_blank" rel="external">http://localhost/WaWebService/BlockDetail/{ProjectName}/{BLOCKNAME}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/BlockDetail/{ProjectName}/{BLOCKNAME}" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockDetail/{ProjectName}/{BLOCKNAME}</a><br>{<br>“Result”:{<br>“Ret”:Value,<br>“Total”:Value<br>},<br>“Tags”:[{<br>“TagType”:”String”,<br>“TagName”:”String”,<br>“Description”:”String”,<br>“Address”:”String”<br>}]<br>}</p>
+<h2 id="Block-detail-information-in-SCADA-Node-Project-Node"><a href="#Block-detail-information-in-SCADA-Node-Project-Node" class="headerlink" title="Block detail information in SCADA Node/Project Node"></a>Block detail information in SCADA Node/Project Node</h2><p>Get all Block detail information in Scada node/Project Node.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/BlockDetail/{ProjectName}/{NodeName}/{BLOCKNAME}" target="_blank" rel="external">http://localhost/WaWebService/BlockDetail/{ProjectName}/{NodeName}/{BLOCKNAME}</a></p>
+<p>XML Response: (<a href="http://localhost/WaWebService/BlockList/Express/Scada/0206A6018" target="_blank" rel="external">http://localhost/WaWebService/BlockList/Express/Scada/0206A6018</a>)</p>
+<p>(The same as GetDeviceStatus)</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/BlockDetail/{ProjectName}/{NodeName}/{BLOCKNAME}" target="_blank" rel="external">http://localhost/WaWebService/BlockDetail/{ProjectName}/{NodeName}/{BLOCKNAME}</a></p>
+<p>JSON Response: (<a href="http://localhost/WaWebService/Json/BlockList/Express/Scada/0206A6018" target="_blank" rel="external">http://localhost/WaWebService/Json/BlockList/Express/Scada/0206A6018</a>)</p>
+<p>(The same as GetDeviceStatus)</p>
+<p>#tag value</p>
+<h2 id="Tag-Value-in-Project-Node"><a href="#Tag-Value-in-Project-Node" class="headerlink" title="Tag Value in Project Node"></a>Tag Value in Project Node</h2><p>HTTP METHOD: POST</p>
+<p>XML URL: <a href="http://localhost/WaWebService/GetTagValue/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/GetTagValue/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/GetTagValue/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetTagValue/{ProjectName}</a><br>{<br>“Tags”:[{<br>“Name”:”String”<br>}]<br>}</p>
+<h2 id="Get-Tag-Value-Text-in-Project-Node"><a href="#Get-Tag-Value-Text-in-Project-Node" class="headerlink" title="Get  Tag Value Text in Project Node"></a>Get  Tag Value Text in Project Node</h2><p>HTTP METHOD: POST</p>
+<p>XML URL: <a href="http://localhost/WaWebService/GetTagValueText/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/GetTagValueText/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/GetTagValue/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetTagValue/{ProjectName}</a><br>{<br>“Tags”:[{<br>“Name”:”String”<br>}]<br>}</p>
+<h2 id="Set-Tag-Value-in-Project-Node"><a href="#Set-Tag-Value-in-Project-Node" class="headerlink" title="Set Tag Value in Project Node"></a>Set Tag Value in Project Node</h2><p>HTTP METHOD: POST</p>
+<p>XML URL: <a href="http://localhost/WaWebService/SetTagValue/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/SetTagValue/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/SetTagValue/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/SetTagValue/{ProjectName}</a><br>{<br>“Tags”:[{<br>“Name”:”String”,<br>“Value”:1.26743233E+15<br>}]<br>}</p>
+<h2 id="Set-Tag-Value-Text"><a href="#Set-Tag-Value-Text" class="headerlink" title="Set Tag Value Text"></a>Set Tag Value Text</h2><p>HTTP METHOD: POST</p>
+<p>XML URL: <a href="http://localhost/WaWebService/SetTagValueText/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/SetTagValueText/{ProjectName}</a></p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/SetTagValueText/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/SetTagValueText/{ProjectName}</a></p>
+<p>{<br>“Tags”:[{<br>“Name”:”String”,<br>“Value”:”String”<br>}]<br>}</p>
+<h2 id="SubscribeRealTimeTag"><a href="#SubscribeRealTimeTag" class="headerlink" title="SubscribeRealTimeTag"></a>SubscribeRealTimeTag</h2><p>Subscribe Real-Time Tag</p>
+<p>HTTP Method: POST</p>
+<p>XML Url: <a href="http://localhost/WaWebService/SubscribeRealTimeTag/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/SubscribeRealTimeTag/{ProjectName}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/SubscribeRealTimeTag/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/SubscribeRealTimeTag/{ProjectName}</a></p>
+<p>{<br>“Interval”:Value,<br>“Records”:Value,<br>“Tags”: {[<br>{ “Name”: “String” },<br>{ “Name”: “String” }<br>]}<br>}</p>
+<h2 id="UnsubscribeRealTimeTag"><a href="#UnsubscribeRealTimeTag" class="headerlink" title="UnsubscribeRealTimeTag"></a>UnsubscribeRealTimeTag</h2><p>Unsubscribe Real-Time Tag</p>
+<p>HTTP Method: POST</p>
+<p>XML Url: <a href="http://localhost/WaWebService/UnsubscribeRealTimeTag/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/UnsubscribeRealTimeTag/{ProjectName}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/UnsubscribeRealTimeTag/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/UnsubscribeRealTimeTag/{ProjectName}</a></p>
+<p>{<br>“UnsubscriptionID”:Value,<br>}</p>
+<h2 id="GetRealTimeTagValue"><a href="#GetRealTimeTagValue" class="headerlink" title="GetRealTimeTagValue"></a>GetRealTimeTagValue</h2><p>Get Real-Time Tag Value</p>
+<p>HTTP Method: POST</p>
+<p>XML Url: <a href="http://localhost/WaWebService/GetRealTimeTagValue/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/GetRealTimeTagValue/{ProjectName}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/GetRealTimeTagValue/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetRealTimeTagValue/{ProjectName}</a></p>
+<p>{<br>“SubscriptionID”:Value,<br>}</p>
+<h2 id="Comport-Status"><a href="#Comport-Status" class="headerlink" title="Comport Status"></a>Comport Status</h2><h2 id="Get-comport-status"><a href="#Get-comport-status" class="headerlink" title="Get comport status"></a>Get comport status</h2><p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/GetComportStatus/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/GetComportStatus/{ProjectName}/{NodeName}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/GetComportStatus/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetComportStatus/{ProjectName}/{NodeName}</a></p>
+<p>{<br>“Result”:{<br>“Ret”:Value,<br>“Total”:Value<br>},<br>“Comports”:[{<br>“Port”:Value,<br>“Status”:Value,<br>“TotalDevice”:Value<br>}]<br>}</p>
+<h2 id="GetDeviceStatus"><a href="#GetDeviceStatus" class="headerlink" title="GetDeviceStatus"></a>GetDeviceStatus</h2><p>Get Devices Status</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/GetDeviceStatus/{ProjectName}/{NodeName}/{PORT}" target="_blank" rel="external">http://localhost/WaWebService/GetDeviceStatus/{ProjectName}/{NodeName}/{PORT}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/GetDeviceStatus/{ProjectName}/{NodeName}/{PORT}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetDeviceStatus/{ProjectName}/{NodeName}/{PORT}</a></p>
+<p>{<br>“Result”:{<br>“Ret”:Value,<br>“Total”:Value<br>},<br>“Devices”:[{<br>“Unit”:Value,<br>“Status”:Value<br>}]<br>}</p>
+<h2 id="GetStationStatus"><a href="#GetStationStatus" class="headerlink" title="GetStationStatus"></a>GetStationStatus</h2><p>Get Port Status and Device status in Comport.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML Url: <a href="http://localhost/WaWebService/GetDeviceStatusGetStationStatus/{ProjectName}/{NodeName}/{PORT}" target="_blank" rel="external">http://localhost/WaWebService/GetDeviceStatusGetStationStatus/{ProjectName}/{NodeName}/{PORT}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/GetStationStatus/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetStationStatus/{ProjectName}/{NodeName}</a></p>
+<p>XML Response:</p>
+<p>{<br>“Result”:{<br>“Ret”:Value,<br>“Total”:Value<br>},<br>“Comports”:[{<br>“Port”:Value,<br>“Status”:Value,<br>“TotalDevice”:Value,<br>“Devices”:[{<br>“Unit”:Value,<br>“Status”:Value<br>}]<br>}]<br>}</p>
+<h2 id="SetComportStatus"><a href="#SetComportStatus" class="headerlink" title="SetComportStatus"></a>SetComportStatus</h2><p>Set Port status.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML Url: <a href="http://localhost/WaWebService/SetComportStatus/{ProjectName}/{NodeName}/{PORT}/{State}" target="_blank" rel="external">http://localhost/WaWebService/SetComportStatus/{ProjectName}/{NodeName}/{PORT}/{State}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/SetComportStatus/{ProjectName}/{NodeName}/{PORT}/{State}" target="_blank" rel="external">http://localhost/WaWebService/Json/SetComportStatus/{ProjectName}/{NodeName}/{PORT}/{State}</a></p>
+<p>{<br>“Ret”:Value<br>}</p>
+<h2 id="SetDeviceStatus"><a href="#SetDeviceStatus" class="headerlink" title="SetDeviceStatus"></a>SetDeviceStatus</h2><p>Set Device status</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL: <a href="http://localhost/WaWebService/SetDeviceStatus/{ProjectName}/{NodeName}/{PORT}/{UNIT}/{STATE}" target="_blank" rel="external">http://localhost/WaWebService/SetDeviceStatus/{ProjectName}/{NodeName}/{PORT}/{UNIT}/{STATE}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/SetDeviceStatus/{ProjectName}/{NodeName}/{PORT}/{UNIT}/{STATE}" target="_blank" rel="external">http://localhost/WaWebService/Json/SetDeviceStatus/{ProjectName}/{NodeName}/{PORT}/{UNIT}/{STATE}</a></p>
+<p>{<br>“Ret”:Value<br>}</p>
+<p>#Data Log</p>
+<p>Get Data log.</p>
+<p>HTTP METHOD: POST</p>
+<p>XML URL:           <a href="http://localhost/WaWebService/GetDataLog" target="_blank" rel="external">http://localhost/WaWebService/GetDataLog</a> /{ProjectName}</p>
+<p><a href="http://localhost/WaWebService/GetDataLog" target="_blank" rel="external">http://localhost/WaWebService/GetDataLog</a> /{ProjectName}/{NodeName}</p>
+<p>JSON URL: <a href="http://localhost/WaWebService/Json/GetDataLog" target="_blank" rel="external">http://localhost/WaWebService/Json/GetDataLog</a> /{ProjectName}</p>
+<p><a href="http://localhost/WaWebService/Json//GetDataLog" target="_blank" rel="external">http://localhost/WaWebService/Json//GetDataLog</a> /{ProjectName}/{NodeName}</p>
+<p>{<br>“StartTime”:”String”,<br>“IntervalType”:”String”,<br>“Interval”:Value,<br>“Records”:Value,<br>“Tags”:[{<br>“Name”:”String”,<br>“DataType”:”String”<br>}]<br>}</p>
+<p>#alarm</p>
+<h2 id="Alarm-Summary-Count"><a href="#Alarm-Summary-Count" class="headerlink" title="Alarm Summary Count"></a>Alarm Summary Count</h2><p>Get Alarm Summary count data</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL:           <a href="http://localhost/WaWebService/GetAlarmSummaryCount/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/GetAlarmSummaryCount/{ProjectName}</a></p>
+<p>JSON URL:          <a href="http://localhost/WaWebService/Json/GetAlarmSummaryCount/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetAlarmSummaryCount/{ProjectName}</a></p>
+<h2 id="GetAlarmSummary"><a href="#GetAlarmSummary" class="headerlink" title="GetAlarmSummary"></a>GetAlarmSummary</h2><p>Get Alarm Summary data</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL:           <a href="http://localhost/WaWebService/GetTagValue/{ProjectName}/{start}/{count}" target="_blank" rel="external">http://localhost/WaWebService/GetTagValue/{ProjectName}/{start}/{count}</a></p>
+<p>JSON URL:          <a href="http://localhost/WaWebService/Json/GetTagValue/{ProjectName}/{start}/{count}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetTagValue/{ProjectName}/{start}/{count}</a><br>{<br>“Result”:{<br>“Ret”:Value,<br>“Total”:Value<br>},<br>“AlarmTagList”:[{<br>“Name”:”String”,<br>“Time”:”String”,<br>“AlarmPriority”:Value,<br>“AckStatus”:Value,<br>“AlarmGroup”:Value,<br>“AlarmValue”:1.26743233E+15,<br>“AlarmLimit”:1.26743233E+15,<br>“AlarmType”:Value<br>“NodeName”:”String”<br>“Locked”:Value</p>
+<p>}]<br>}</p>
+<h2 id="GetAlarmLogCount"><a href="#GetAlarmLogCount" class="headerlink" title="GetAlarmLogCount"></a>GetAlarmLogCount</h2><p>Get Alarm log count data</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL:           <a href="http://localhost/WaWebService/GetAlarmLogCount/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/GetAlarmLogCount/{ProjectName}/{NodeName}</a></p>
+<p>JSON URL:           <a href="http://localhost/WaWebService/Json/GetAlarmLogCount/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetAlarmLogCount/{ProjectName}/{NodeName}</a></p>
+<p>{<br>“Ret”:Value,<br>“Total”:Value<br>}</p>
+<h2 id="GetAlarmLog"><a href="#GetAlarmLog" class="headerlink" title="GetAlarmLog"></a>GetAlarmLog</h2><p>Get Alarm Log</p>
+<p>HTTP Method: GET</p>
+<p>XML Url:    <a href="http://localhost/WaWebService/GetAlarmLog/{ProjectName}/{NodeName}/{Start}/{Count}" target="_blank" rel="external">http://localhost/WaWebService/GetAlarmLog/{ProjectName}/{NodeName}/{Start}/{Count}</a></p>
+<p>JSON Url:  <a href="http://localhost/WaWebService/Json/GetAlarmLog/{ProjectName}/{NodeName}/{Start}/{Count}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetAlarmLog/{ProjectName}/{NodeName}/{Start}/{Count}</a></p>
+<p>{<br>“Result”:{<br>“Ret”:Value,<br>“Total”:Value<br>},<br>“AlarmLogs”:[{<br>“Time”:”String”,<br>“Priority”:”String”,<br>“TagName”:”String”,<br>“Description”:”String”,<br>“Action”:”String”<br>}]<br>}</p>
+<h2 id="AlarmAck"><a href="#AlarmAck" class="headerlink" title="AlarmAck"></a>AlarmAck</h2><p>Acknowledge alarms</p>
+<p>HTTP METHOD: POST</p>
+<p>XML URL:           URL: <a href="http://localhost/WaWebService/AlarmAck/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/AlarmAck/{ProjectName}/{NodeName}</a></p>
+<p>JSON URL:          URL: <a href="http://localhost/WaWebService/Json/AlarmAck/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/AlarmAck/{ProjectName}/{NodeName}</a></p>
+<p>{<br>“IpAddress”:”String”,<br>“Computer”:”String”,<br>“User”:”String”,<br>“Tags”:[{<br>“Name”:”String”<br>}]<br>}</p>
+<h2 id="AlarmAckAll"><a href="#AlarmAckAll" class="headerlink" title="AlarmAckAll"></a>AlarmAckAll</h2><p>Acknowledge alarms</p>
+<p>HTTP METHOD: POST</p>
+<p>Acknowledge Alarm in Project</p>
+<p>XML Url: <a href="http://localhost/WaWebService/AlarmAck/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/AlarmAck/{ProjectName}</a></p>
+<p>JSON Url: <a href="http://localhost/WaWebService/Json/AlarmAck/{ProjectName}" target="_blank" rel="external">http://localhost/WaWebService/Json/AlarmAck/{ProjectName}</a></p>
+<p>Acknowledge Alarm in SCADA</p>
+<p>XML URL:           URL: <a href="http://localhost/WaWebService/AlarmAck/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/AlarmAck/{ProjectName}/{NodeName}</a></p>
+<p>JSON URL:          URL: <a href="http://localhost/WaWebService/Json/AlarmAck/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/AlarmAck/{ProjectName}/{NodeName}</a></p>
+<p>{<br>“IpAddress”:”String”,<br>“Computer”:”String”,<br>“User”:”String”,<br>“Tags”:[{<br>“Name”:”String”<br>}]<br>}</p>
+<h2 id="GetAlarmLogIndex"><a href="#GetAlarmLogIndex" class="headerlink" title="GetAlarmLogIndex"></a>GetAlarmLogIndex</h2><p>Since the maximum count of alarm log in WebAccess is 5000, while the total number of alarm log above 5000, WebAccess will circularly overwrite the first record and so on. Using GetAlarmLogIndex service can get newest record’s index position (between 1~5000). You can use this service periodically and compare the index with previous index. If the index position has been changed, it means that the Alarm Log has been updated.</p>
+<p>{</p>
+<p>“Ret”:Value,</p>
+<p>“Index”:Value</p>
+<p>}</p>
+<p>#action log</p>
+<h2 id="Get-Action-log-count-data"><a href="#Get-Action-log-count-data" class="headerlink" title="Get Action log count data."></a>Get Action log count data.</h2><p>HTTP METHOD: GET</p>
+<p>XML URL:           <a href="http://localhost/WaWebService/GetActionLogCount/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/GetActionLogCount/{ProjectName}/{NodeName}</a></p>
+<p>JSON URL:          <a href="http://localhost/WaWebService/Json/GetActionLogCount/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetActionLogCount/{ProjectName}/{NodeName}</a><br>{<br>“Ret”:Value,<br>“Total”:Value<br>}</p>
+<h2 id="GetActionLog"><a href="#GetActionLog" class="headerlink" title="GetActionLog"></a>GetActionLog</h2><p>Get Action log data.</p>
+<p>HTTP METHOD: GET</p>
+<p>XML URL:           <a href="http://localhost/WaWebService/GetActionLog/{ProjectName}/{NodeName}/{Start}/{Count}" target="_blank" rel="external">http://localhost/WaWebService/GetActionLog/{ProjectName}/{NodeName}/{Start}/{Count}</a></p>
+<p>JSON URL:          <a href="http://localhost/WaWebService/Json/GetActionLog/{ProjectName}/{NodeName}/{Start}/{Count}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetActionLog/{ProjectName}/{NodeName}/{Start}/{Count}</a></p>
+<p>{<br>“Result”:{<br>“Ret”:Value,<br>“Total”:Value<br>},<br>“ActionLogs”:[{<br>“Time”:”String”,<br>“Priority”:”String”,<br>“TagName”:”String”,<br>“Description”:”String”,<br>“Action”:”String”<br>}]<br>}</p>
+<h2 id="GetActionLogIndex"><a href="#GetActionLogIndex" class="headerlink" title="GetActionLogIndex"></a>GetActionLogIndex</h2><p>Since the maximum count of action log in WebAccess is 5000, while the total number of action log above 5000, WebAccess will circularly overwrite the first record and so on. Using GetActionLogIndex service can get newest record’s index position (between 1~5000). You can use this service periodically and compare the index with previous index. If the index position has been changed, it means that the Action Log has been updated.</p>
+<p>HTTP Method : GET</p>
+<p>XML Url:    <a href="http://localhost/WaWebService/GetActionLogIndex/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/GetActionLogIndex/{ProjectName}/{NodeName}</a></p>
+<p>JSON Url:  <a href="http://localhost/WaWebService/Json/GetActionLogIndex/{ProjectName}/{NodeName}" target="_blank" rel="external">http://localhost/WaWebService/Json/GetActionLogIndex/{ProjectName}/{NodeName}</a></p>
+<p>{<br>“Index”:Value,<br>“Ret”:Value<br>}</p>
+</div><script type="text/javascript" src="/public/js/share.js?v=0.0.0" async></script><a data-url="http://notes.feaswcy.com/public/2017/05/01/webaccess-web-service/" data-id="cj3bbmn8a000z5n5mr8gqanru" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/public/2017/05/30/how-browser-work/" class="pre"></a><a href="/public/2016/12/20/fe-games/" class="next">前端游戏</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://notes.feaswcy.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/public/categories/web技术/">web技术</a></li><li class="category-list-item"><a class="category-list-link" href="/public/categories/随笔/">随笔</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/public/tags/fe/" style="font-size: 15px;">fe</a> <a href="/public/tags/fe-js/" style="font-size: 15px;">fe-js</a> <a href="/public/tags/notes/" style="font-size: 15px;">notes</a> <a href="/public/tags/university/" style="font-size: 15px;">university</a> <a href="/public/tags/fe-mobile/" style="font-size: 15px;">fe-mobile</a> <a href="/public/tags/web-http-tcp/" style="font-size: 15px;">web,http/tcp</a> <a href="/public/tags/web/" style="font-size: 15px;">web</a> <a href="/public/tags/php-yii/" style="font-size: 15px;">php yii</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/public/2017/05/30/notes-in-2016/">notes-in-2016</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2017/05/30/how-browser-work/">how-browser-work</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2017/05/01/webaccess-web-service/">webaccess-web-service</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2016/12/20/fe-games/">前端游戏</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2016/12/08/scroll-on-mobile/">手机端前端开发问题与总结(持续更新)</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2016/12/03/web-rem/">手机端适配方案</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2016/11/20/oo-javascript/">oo-javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2016/11/16/javascript/">Javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2016/11/14/FE-notes/">前端布局与样式技巧汇总</a></li><li class="post-list-item"><a class="post-list-link" href="/public/2016/11/10/front-end-learning/">The way to FE engineer</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.zhihu.com/people/happyfizz" title="知乎" target="_blank">知乎</a><ul></ul><a href="https://github.com/feaswcy" title="Github" target="_blank">Github</a><ul></ul><a href="https://www.haomwei.com/technology/maupassant-hexo.html" title="主题开发者" target="_blank">主题开发者</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/public/." rel="nofollow">Feaswcy.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/public/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/public/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/public/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/public/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/public/js/smartresize.js?v=0.0.0"></script></div></body></html>
