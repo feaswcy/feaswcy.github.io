@@ -1,7 +1,7 @@
 ---
 title: The way to FE engineer
 date: 2016-11-10 19:40:00
-tags: fe
+tags: web技术工程师
 categories:
   - web技术
 ---

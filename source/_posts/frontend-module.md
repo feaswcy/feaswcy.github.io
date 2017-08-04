@@ -4,7 +4,7 @@ id: 41
 categories:
   - web技术
 date: 2016-04-23 17:16:30
-tags: fe
+tags:
 ---
 
 最近正在尝试改写一个angular版本的ueditor（戳[angular-bdeditor](http://github.com/charstars/angular-bdeditor)），代码测试玩人肉处理好加载的example后，发现js的加载顺序实在是一个令人头疼的问题，早些时候了解过一点模块加载方式，比如require.js,sea.js等等，还有各种各样的模块规范CMD,AMD,今天打算详细的梳理一下前端模块化的知识，与前端的小伙伴共勉。
