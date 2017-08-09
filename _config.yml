@@ -69,5 +69,5 @@ mathjax: true
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:feaswcy/notes.feaswcy.com.git
+  repo: git@github.com:feaswcy/feaswcy.github.io.git
   branch: master
